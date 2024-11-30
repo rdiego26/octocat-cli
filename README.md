@@ -10,6 +10,7 @@ CLI tool that interacts with Github API.
 - Solve dependencies `npm install`
 - Up Postgres container `docker-compose up`
 - Perform migrations `npm run migrate`
+- Rename `env_example` to `.env` and fill in the environment variables
 - Run CLI `npm run start`
 
 ### Adding new migrations
