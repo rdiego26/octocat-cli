@@ -15,6 +15,8 @@ export default [
       "indent": ["error", 2, { SwitchCase: 1 }],
       "no-tabs": "error",
       "@typescript-eslint/no-unused-vars": ["warn"],
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-require-imports": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
     },
   }
