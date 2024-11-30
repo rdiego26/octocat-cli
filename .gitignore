@@ -131,3 +131,7 @@ dist
 
 # Jetbrains IDEs
 .idea
+
+# Compiled Javascript
+dist/
+*.js
