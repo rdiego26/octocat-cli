@@ -5,6 +5,7 @@ CLI tool that interacts with Github API.
 - [Commander](https://www.npmjs.com/package/commander)
 - [Typescript](https://www.typescriptlang.org/)
 - [Node.js](https://nodejs.org/)
+- [Postgres](https://www.postgresql.org/)
 
 ### Steps to run
 - Solve dependencies `npm install`
