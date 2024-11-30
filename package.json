@@ -2,8 +2,10 @@
   "name": "octocat-cli",
   "version": "1.0.0",
   "description": "CLI tool that interacts with Github API",
-  "main": "index.js",
+  "main": "src/cli.js",
   "scripts": {
+    "start": "ts-node src/cli.ts",
+    "build": "tsc",
     "migrate": "DATABASE_URL=postgres://postgres:postgres@localhost:35432/postgres node-pg-migrate --migrations-dir=src/migrations up",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
