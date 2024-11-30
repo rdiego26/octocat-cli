@@ -4,6 +4,7 @@
   "description": "CLI tool that interacts with Github API",
   "main": "index.js",
   "scripts": {
+    "migrate": "DATABASE_URL=postgres://postgres:postgres@localhost:35432/postgres node-pg-migrate --migrations-dir=src/migrations up",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,5 +19,8 @@
     "pg-promise": "^11.10.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "node-pg-migrate": "^7.8.0"
   }
 }
