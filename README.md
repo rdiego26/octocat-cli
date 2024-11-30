@@ -12,6 +12,7 @@ CLI tool that interacts with Github API.
 - Perform migrations `npm run migrate`
 - Rename `env_example` to `.env` and fill in the environment variables
   - If you need to create a Github token, follow the steps [here](https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28#basic-authentication) 
+- Build CLI `npm run build`
 - Run CLI `npm run start`
 
 ### Adding new migrations

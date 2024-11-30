@@ -33,7 +33,7 @@ export const getUserByName = async (name: string) => {
 };
 
 export const getUsersByLocation = async (location: string) => {
-  return db.any('SELECT * FROM users WHERE location = $1', [location]);
+  return db.any('SELECT * FROM users WHERE location ILIKE $1', [`%${location}%`]);
 };
 
 export const getUsersByLanguage = async (language: string) => {
