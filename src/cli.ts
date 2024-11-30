@@ -44,7 +44,7 @@ program
     .command('clean')
     .description('Remove all users')
     .action(async () => {
-        const users = await cleanData();
+        await cleanData();
         console.log('All users removed!');
     });
 
