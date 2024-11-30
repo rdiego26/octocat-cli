@@ -1,5 +1,5 @@
 import db from '../config/db';
-import {insertUser, insertLanguage, getUserByName} from '../db/queries';
+import { insertUser, insertLanguage, getUserByName } from '../db/queries';
 import { fetchGitHubUser, fetchUserRepos } from '../config/github';
 import { cleanAndUnique } from "../utils";
 
