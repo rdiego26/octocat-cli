@@ -8,7 +8,11 @@ program
     .command('add <username>')
     .description('Fetch and store a GitHub user')
     .action(async (username) => {
-        await saveUserData(username);
+        const result = await saveUserData(username);
+        if (!result) {
+            console.info(`User ${username} already saved.`);
+            return;
+        }
         console.info(`User ${username} saved.`);
     });
 

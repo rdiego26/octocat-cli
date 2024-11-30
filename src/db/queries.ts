@@ -24,7 +24,7 @@ export const getUsers = async () => {
 };
 
 export const getUserByName = async (name: string) => {
-    return db.any('SELECT * FROM user WHERE name = $1', [name]);
+    return db.any('SELECT * FROM users WHERE name = $1', [name]);
 };
 
 export const getUsersByLocation = async (location: string) => {

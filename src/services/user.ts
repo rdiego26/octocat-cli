@@ -1,11 +1,16 @@
 import db from '../config/db';
-import { insertUser, insertLanguage } from '../db/queries';
+import {insertUser, insertLanguage, getUserByName} from '../db/queries';
 import { fetchGitHubUser, fetchUserRepos } from '../config/github';
 import { cleanAndUnique } from "../utils";
 
-export const saveUserData = async (username: string): Promise<string> => {
+export const saveUserData = async (username: string): Promise<string | null> => {
     try {
         return await db.tx(async (tx) => {
+            const isAlreadySaved = await getUserByName(username);
+            if (isAlreadySaved) {
+                return null;
+            }
+
             const user = await fetchGitHubUser(username);
             const languages = await fetchUserRepos(username);
             const { id: userId } = await insertUser(tx, user.name, user.location, user.avatar_url);
