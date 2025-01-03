@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Jetbrains IDEs
+.idea
+
+# Compiled Javascript
+dist/
+src/**/*.js
+
